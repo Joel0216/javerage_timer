@@ -12,7 +12,9 @@ class TimerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TimerBloc(timerRepository: TimerRepositoryImpl(const Ticker())),
+      create: (_) => TimerBloc(
+        timerRepository: TimerRepositoryImpl(const Ticker()),
+      ),
       child: const TimerView(),
     );
   }

@@ -13,7 +13,7 @@ sealed class TimerState extends Equatable {
 }
 
 /// The `TimerInitial` class represents the initial state of a timer with a specified duration in Dart.
-class TimerInitial extends TimerState {
+final class TimerInitial extends TimerState {
   const TimerInitial(super.duration);
 
   @override
@@ -22,7 +22,7 @@ class TimerInitial extends TimerState {
 
 /// The `TimerTicking` class represents the state of a timer that is currently ticking with a specific
 /// duration.
-class TimerTicking extends TimerState {
+final class TimerTicking extends TimerState {
   const TimerTicking(super.duration);
 
   @override
@@ -30,6 +30,6 @@ class TimerTicking extends TimerState {
 }
 
 /// The `TimerFinished` class represents a state where the timer has finished.
-class TimerFinished extends TimerState {
+final class TimerFinished extends TimerState {
   const TimerFinished() : super(0);
 }
